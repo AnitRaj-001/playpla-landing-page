@@ -11,15 +11,18 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-24 px-6">
+    <section id="faq" className="relative py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          <span className="inline-block text-sm font-medium text-primary mb-3 tracking-widest uppercase">
+            Support
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4">
             FAQ
           </h2>
           <p className="text-muted-foreground text-lg">
