@@ -30,7 +30,7 @@ const DownloadSection = () => {
               </p>
 
               <motion.a
-                href="/download/playpal-latest.apk"
+                href="/apk/playpal.apk"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-lg rounded-2xl glow-primary transition-all hover:glow-primary-strong"

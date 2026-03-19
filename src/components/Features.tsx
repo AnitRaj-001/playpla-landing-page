@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
-import { Film, Tv, Radio, Heart, Zap, Smartphone } from "lucide-react";
+import { Film, Tv, Radio, Heart, Zap, Smartphone, Sparkles, Globe } from "lucide-react";
 
 const features = [
   { icon: Film, title: "Movies", desc: "Browse and stream thousands of movies, from blockbusters to indie gems.", color: "from-primary/20 to-primary/5" },
   { icon: Tv, title: "TV Series", desc: "Binge-watch complete series with curated recommendations and tracking.", color: "from-primary/15 to-primary/5" },
   { icon: Radio, title: "Live TV", desc: "Access 700+ live channels across entertainment, sports, news, and more.", color: "from-primary/20 to-primary/5" },
-  { icon: Heart, title: "Favorites", desc: "Save your favorite movies and series for quick access anytime.", color: "from-primary/15 to-primary/5" },
+  { icon: Sparkles, title: "Anime Theme", desc: "Specially curated anime section with high-quality streams and multiple genres.", color: "from-primary/15 to-primary/5" },
+  { icon: Globe, title: "Multi Language", desc: "Support for multiple languages, ensuring everyone can enjoy their favorite content.", color: "from-primary/20 to-primary/5" },
   { icon: Zap, title: "Lightning Fast", desc: "Optimized for speed — even on low-end devices with minimal data usage.", color: "from-primary/20 to-primary/5" },
   { icon: Smartphone, title: "Clean UI", desc: "Beautiful, intuitive interface designed for effortless navigation.", color: "from-primary/15 to-primary/5" },
+  { icon: Heart, title: "Favorites", desc: "Save your favorite movies and series for quick access anytime.", color: "from-primary/15 to-primary/5" },
+  { icon: Zap, title: "No Ads", desc: "Enjoy a completely ad-free experience while watching your favorite content.", color: "from-primary/20 to-primary/5" },
 ];
 
 const Features = () => {

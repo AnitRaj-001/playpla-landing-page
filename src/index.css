@@ -108,4 +108,28 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, hsl(0, 0%, 16%), transparent);
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 15%);
+    border-radius: 5px;
+    border: 2px solid var(--background);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 80%, 50%, 0.5);
+  }
 }

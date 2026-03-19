@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Download, Play, Star, Users } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/playpal-logo.png";
-import screenMovies from "@/assets/screenshot-movies.png";
-import screenLivetv from "@/assets/screenshot-livetv.png";
-import screenDetail from "@/assets/screenshot-detail.png";
+import logo from "@/assets/logo_playpal.png";
+import liveTv from "@/assets/liveTv.jpeg";
+import movies from "@/assets/movies.jpeg";
+import series from "@/assets/series.jpeg";
 
 const stats = [
   { icon: Users, value: "50K+", label: "Active Users" },
@@ -38,36 +38,58 @@ const Hero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-surface text-sm text-muted-foreground mb-8"
+            className="flex flex-col gap-4 items-center lg:items-start mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Free &amp; No Ads
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-surface text-sm text-muted-foreground">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Free &amp; No Ads
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-lg md:text-xl font-medium tracking-wide text-foreground/80 italic border-l-2 border-primary pl-4"
+            >
+              "PlayPal – Play Every Pal."
+            </motion.div>
           </motion.div>
 
-          <motion.img
-            src={logo}
-            alt="PlayPal Logo"
-            className="w-16 h-16 mb-6 mx-auto lg:mx-0"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.15 }}
-          />
+          <div className="flex items-center gap-3 mb-6 justify-center lg:justify-start">
+            <motion.img
+              src={logo}
+              alt="PlayPal Logo"
+              className="w-20 h-20 rounded-xl"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.15 }}
+            />
+            <motion.span
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-4xl md:text-5xl font-black tracking-[-0.05em] flex items-center gap-1"
+            >
+              <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">PLAY</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-red-500 to-orange-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.3)] italic">PAL</span>
+            </motion.span>
+          </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-4 leading-[0.95]">
             <span className="text-foreground">Your Ultimate</span>
             <br />
-            <span className="text-gradient">Streaming</span>
+            <span className="text-gradient">Entertainment</span>
             <br />
-            <span className="text-foreground">Companion</span>
+            <span className="text-foreground">App</span>
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground max-w-[44ch] mx-auto lg:mx-0 mb-8 leading-relaxed text-balance">
-            Stream movies, binge series, and watch 700+ live TV channels — all in one beautifully crafted Android app.
+            Stream movies, series, and watch 700+ live TV channels — all in one beautifully crafted Android app.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
             <motion.a
-              href="/download/playpal-latest.apk"
+              href="/apk/playpal.apk"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl glow-primary transition-all hover:glow-primary-strong"
@@ -119,7 +141,7 @@ const Hero = () => {
             animate={{ y: [20, 6, 20] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           >
-            <img src={screenLivetv} alt="PlayPal Live TV" className="w-full h-auto" loading="lazy" />
+            <img src={liveTv} alt="PlayPal Live TV" className="w-full h-auto rounded-[2rem]" loading="lazy" />
           </motion.div>
 
           {/* Center phone (hero) */}
@@ -128,7 +150,7 @@ const Hero = () => {
             animate={{ y: [0, -12, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
           >
-            <img src={screenMovies} alt="PlayPal Movies" className="w-full h-auto" />
+            <img src={movies} alt="PlayPal App" className="w-full h-auto rounded-[2.5rem]" />
             {/* Reflection glow under center phone */}
             <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/20 rounded-full blur-xl" />
           </motion.div>
@@ -140,8 +162,10 @@ const Hero = () => {
             animate={{ y: [20, 8, 20] }}
             transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
           >
-            <img src={screenDetail} alt="PlayPal Detail" className="w-full h-auto" loading="lazy" />
+            <img src={series} alt="PlayPal Detail" className="w-full h-auto rounded-[2rem]" loading="lazy" />
           </motion.div>
+
+
         </motion.div>
       </div>
 
