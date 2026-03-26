@@ -44,7 +44,7 @@ const Hero = () => {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Free &amp; No Ads
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
             <motion.a
-              href="/apk/playpal.apk"
+              href="https://github.com/AnitRaj-001/playpla-landing-page/releases/latest/download/playpal.apk"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl glow-primary transition-all hover:glow-primary-strong"
