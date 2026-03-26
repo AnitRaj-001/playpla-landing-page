@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Download, QrCode, Shield, Wifi } from "lucide-react";
+import { Download, Shield, Wifi } from "lucide-react";
+import scanImage from "@/assets/scan.jpeg";
 
 const DownloadSection = () => {
   return (
@@ -30,7 +31,7 @@ const DownloadSection = () => {
               </p>
 
               <motion.a
-                href="/playpal.apk"
+                href="/apk/playpal.apk"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-lg rounded-2xl glow-primary transition-all hover:glow-primary-strong"
@@ -53,10 +54,22 @@ const DownloadSection = () => {
             </div>
 
             <div className="flex flex-col items-center gap-4">
-              <div className="w-40 h-40 bg-foreground rounded-2xl flex items-center justify-center shadow-elevated">
-                <QrCode className="w-28 h-28 text-background" />
+              <div className="w-52 h-52 bg-white rounded-3xl p-4 shadow-xl flex items-center justify-center">
+                <img
+                  src={scanImage}
+                  alt="Scan to download APK"
+                  className="w-full h-full object-contain scale-130"
+                />
               </div>
-              <span className="text-sm text-muted-foreground">Scan to download</span>
+
+              <div className="flex flex-col items-center gap-1.5 mt-2">
+                <span className="text-base font-semibold text-white px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                  Scan to download
+                </span>
+                <span className="text-xs text-muted-foreground font-medium">
+                  Point your camera to install
+                </span>
+              </div>
             </div>
           </div>
         </motion.div>

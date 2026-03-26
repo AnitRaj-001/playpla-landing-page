@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
-import anime from "@/assets/anime.jpeg";
-import liveTv from "@/assets/liveTv.jpeg";
+import splash from "@/assets/splashscreen.jpeg";
 import login from "@/assets/login.jpeg";
 import movies from "@/assets/movies.jpeg";
-import profile from "@/assets/profile.jpeg";
 import series from "@/assets/series.jpeg";
+import anime from "@/assets/anime.jpeg";
+import liveTv from "@/assets/liveTv.jpeg";
 import watchscreen from "@/assets/watchscreen.jpeg";
+import profile from "@/assets/profile.jpeg";
 
 const screenshots = [
+  { src: splash, alt: "Splash Screen", label: "Splash" },
+  { src: login, alt: "Login Screen", label: "Login" },
   { src: movies, alt: "Movies Screen", label: "Movies" },
-  { src: liveTv, alt: "Live TV Screen", label: "Live TV" },
   { src: series, alt: "Series Screen", label: "Series" },
   { src: anime, alt: "Anime Screen", label: "Anime" },
+  { src: liveTv, alt: "Live TV Screen", label: "Live TV" },
   { src: watchscreen, alt: "Watch Screen", label: "Streaming" },
-  { src: login, alt: "Login Screen", label: "Login" },
   { src: profile, alt: "Profile Screen", label: "Profile" },
 ];
 
