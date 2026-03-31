@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Download, Play, Star, Users } from "lucide-react";
+import { Download, Play, Star, Users, Trophy } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo_playpal.png";
-import liveTv from "@/assets/liveTv.jpeg";
+import liveTv from "@/assets/liveTv.png";
 import movies from "@/assets/movies.jpeg";
 import series from "@/assets/series.jpeg";
 
@@ -40,9 +40,15 @@ const Hero = () => {
             transition={{ delay: 0.1 }}
             className="flex flex-col gap-4 items-center lg:items-start mb-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-surface text-sm text-muted-foreground">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Free &amp; No Ads
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-surface text-sm text-muted-foreground">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                Free &amp; No Ads
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-500 text-sm font-bold border border-orange-500/20">
+                <Trophy className="w-3.5 h-3.5" />
+                IPL 2026 LIVE
+              </div>
             </div>
 
             <motion.div

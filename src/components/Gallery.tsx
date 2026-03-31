@@ -4,7 +4,7 @@ import login from "@/assets/login.jpeg";
 import movies from "@/assets/movies.jpeg";
 import series from "@/assets/series.jpeg";
 import anime from "@/assets/anime.jpeg";
-import liveTv from "@/assets/liveTv.jpeg";
+import liveTv from "@/assets/liveTv.png";
 import watchscreen from "@/assets/watchscreen.jpeg";
 import profile from "@/assets/profile.jpeg";
 

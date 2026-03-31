@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Film, Tv, Radio, Heart, Zap, Smartphone, Sparkles, Globe } from "lucide-react";
+import { Film, Tv, Radio, Heart, Zap, Smartphone, Sparkles, Globe, Trophy } from "lucide-react";
 
 const features = [
+  { icon: Trophy, title: "IPL 2026 Live", desc: "Watch every match of IPL 2026 live in 4K with multiple language commentary.", color: "from-orange-500/20 to-red-600/10", isHot: true },
   { icon: Film, title: "Movies", desc: "Browse and stream thousands of movies, from blockbusters to indie gems.", color: "from-primary/20 to-primary/5" },
   { icon: Tv, title: "TV Series", desc: "Binge-watch complete series with curated recommendations and tracking.", color: "from-primary/15 to-primary/5" },
   { icon: Radio, title: "Live TV", desc: "Access 700+ live channels across entertainment, sports, news, and more.", color: "from-primary/20 to-primary/5" },
@@ -9,7 +10,6 @@ const features = [
   { icon: Globe, title: "Multi Language", desc: "Support for multiple languages, ensuring everyone can enjoy their favorite content.", color: "from-primary/20 to-primary/5" },
   { icon: Zap, title: "Lightning Fast", desc: "Optimized for speed — even on low-end devices with minimal data usage.", color: "from-primary/20 to-primary/5" },
   { icon: Smartphone, title: "Clean UI", desc: "Beautiful, intuitive interface designed for effortless navigation.", color: "from-primary/15 to-primary/5" },
-  { icon: Heart, title: "Favorites", desc: "Save your favorite movies and series for quick access anytime.", color: "from-primary/15 to-primary/5" },
   { icon: Zap, title: "No Ads", desc: "Enjoy a completely ad-free experience while watching your favorite content.", color: "from-primary/20 to-primary/5" },
 ];
 
@@ -17,7 +17,7 @@ const Features = () => {
   return (
     <section id="features" className="relative py-28 px-6">
       <div className="gradient-section absolute inset-0 pointer-events-none" />
-      
+
       <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,10 +49,18 @@ const Features = () => {
             >
               {/* Hover gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${f.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
+
               <div className="relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300">
-                  <f.icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300">
+                    <f.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  {f.isHot && (
+                    <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold tracking-widest uppercase border border-red-500/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                      LIVE
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{f.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{f.desc}</p>

@@ -31,7 +31,7 @@ const DownloadSection = () => {
               </p>
 
               <motion.a
-                href="https://github.com/AnitRaj-001/playpla-landing-page/releases/latest/download/playpal.apk"
+                href="https://github.com/AnitRaj-001/playpla-landing-page/releases/latest/download/playpal-v1.1.0.apk"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-lg rounded-2xl glow-primary transition-all hover:glow-primary-strong"
